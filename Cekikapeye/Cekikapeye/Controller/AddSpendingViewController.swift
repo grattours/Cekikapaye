@@ -22,9 +22,20 @@ class AddSpendingViewController: UIViewController {
                 return
         }
 
-        let spending = Spending(content: content, amount: amount)
-        SpendingService.shared.add(spending: spending)
+        let spending = Spending(context: AppDelegate.viewContext)
+        spending.content = content
+        spending.amount = amount
+        spending.person = getSelectedPerson()
+        try? AppDelegate.viewContext.save()
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func getSelectedPerson() -> Person? {
+        if persons.count > 0 {
+          let index = personPickerView.selectedRow(inComponent: 0)
+            return persons[index]
+        }
+        return nil
     }
 }
 

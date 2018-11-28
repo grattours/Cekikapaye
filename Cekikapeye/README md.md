@@ -2,13 +2,14 @@
 Formation OC - Cekikapaye -
 Persistance des données - Coredata
 
-    Application du cours Etape 2 CoreData
-    (avant relations)
+    Application compléte  du cours CoreData
+
     
     
-Améliorations à voir :
+    Extensions possibles :
     
-        Total par personne
+    Prédicats : sélectionner une personne
+    
         Total global
         Ajout de date / période (?)
 
